@@ -1,7 +1,7 @@
 
-  # Create Testing Application
+  # Design Python World Clock UI
 
-  This is a code bundle for Create Testing Application. The original project is available at https://www.figma.com/design/XJxw4vI52Wd0DqP00N0odG/Create-Testing-Application.
+  This is a code bundle for Design Python World Clock UI. The original project is available at https://www.figma.com/design/cYdOUm1rswwphKJKTxXbQS/Design-Python-World-Clock-UI.
 
   ## Running the code
 
