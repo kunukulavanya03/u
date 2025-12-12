@@ -6,7 +6,7 @@ Backend API for u
 
 - **Frontend**: React
 - **Backend**: FastAPI + SQLAlchemy
-- **Frontend Source**: GitHub ([Repository](https://github.com/HimaShankarReddyEguturi/Createtestingapplication))
+- **Frontend Source**: GitHub ([Repository](https://github.com/HimaShankarReddyEguturi/Designpythonworldclockui.git))
 
 ## Project Structure
 
@@ -43,17 +43,20 @@ cd backend
 
 ## Features
 
-- user management
-- authentication
-- data storage
+- user authentication
+- data management
 
 ## API Endpoints
 
-- `POST /api/register` - Create a new user account
-- `POST /api/login` - Log in to an existing user account
-- `POST /api/password_reset` - Reset a user's password
+- `POST /api/register` - Register a new user
+- `POST /api/login` - Login to an existing user account
+- `POST /api/reset-password` - Reset a user's password
 - `GET /api/profile` - Get a user's profile information
 - `PUT /api/profile` - Update a user's profile information
+- `GET /api/data` - Get a list of data
+- `POST /api/data` - Create new data
+- `PUT /api/data/{id}` - Update existing data
+- `DELETE /api/data/{id}` - Delete data
 
 ## License
 
