@@ -1,27 +1,25 @@
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from app.database import Base, Session
+
+Base = declarative_base()
 
 class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
-    username = Column(String, nullable=False)
-    email = Column(String, nullable=False)
-    password = Column(String, nullable=False)
-    created_at = Column(DateTime, nullable=False)
-    updated_at = Column(DateTime, nullable=False)
+    username = Column(String, unique=True)
+    email = Column(String, unique=True)
+    password = Column(String)
 
-    items = relationship("Item", backref="user")
+    resources = relationship("Resource", back_populates="user")
 
-class Item(Base):
-    __tablename__ = "items"
+class Resource(Base):
+    __tablename__ = "resources"
 
     id = Column(Integer, primary_key=True)
-    title = Column(String, nullable=False)
-    description = Column(String, nullable=False)
-    created_at = Column(DateTime, nullable=False)
-    updated_at = Column(DateTime, nullable=False)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    name = Column(String)
+    description = Column(String)
+    user_id = Column(Integer, ForeignKey("users.id"))
 
-    user = relationship("User", backref="items")
+    user = relationship("User", back_populates="resources")
