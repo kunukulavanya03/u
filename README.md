@@ -43,20 +43,23 @@ cd backend
 
 ## Features
 
-- user authentication
-- data management
+- user registration
+- user login
+- password reset
+- profile management
+- resource management
 
 ## API Endpoints
 
-- `POST /api/register` - Register a new user
-- `POST /api/login` - Login to an existing user account
-- `POST /api/reset-password` - Reset a user's password
-- `GET /api/profile` - Get a user's profile information
-- `PUT /api/profile` - Update a user's profile information
-- `GET /api/data` - Get a list of data
-- `POST /api/data` - Create new data
-- `PUT /api/data/{id}` - Update existing data
-- `DELETE /api/data/{id}` - Delete data
+- `POST /api/register` - Register a new user account.
+- `POST /api/login` - Log in to an existing user account.
+- `POST /api/password_reset` - Reset a user's password.
+- `GET /api/profile` - Get a user's profile information.
+- `PUT /api/profile` - Update a user's profile information.
+- `GET /api/resources` - Get a list of available resources.
+- `POST /api/resources` - Create a new resource.
+- `PUT /api/resources/{resource_id}` - Update an existing resource.
+- `DELETE /api/resources/{resource_id}` - Delete a resource.
 
 ## License
 
